@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fruit Hunt</title>
+  <script type="module" crossorigin src="./assets/index-BFGMRT5J.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CCPmoKbx.css">
+</head>
+<body>
+  <!-- Pixi canvas mounts here -->
+  <div id="game-container"></div>
+
+  <!-- HUD: visible during play state -->
+  <nav id="hud" class="hidden">
+    <div id="hud-score">0</div>
+    <div id="hud-timer">1:00</div>
+    <div id="hud-combo">COMBO 1X</div>
+  </nav>
+
+  <!-- Lobby / title screen -->
+  <div id="menu-screen" class="overlay">
+    <img src="./images/logo.png" alt="Fruit Hunt" id="menu-logo" />
+    <div id="menu-high-score">HIGH SCORE: 0</div>
+    <img src="./images/fruit-splash.png" alt="" id="menu-fruit-splash" />
+    <div class="start-prompt">CLICK TO START</div>
+  </div>
+
+  <!-- Countdown: 3, 2, 1, GO! -->
+  <div id="countdown-screen" class="overlay hidden">
+    <div id="countdown-text">3</div>
+  </div>
+
+  <!-- Game over / end screen -->
+  <div id="end-screen" class="overlay hidden">
+    <h2>GAME OVER</h2>
+    <div id="end-score">0</div>
+    <div id="end-high-score" class="hidden">&#127942; NEW HIGH SCORE!</div>
+    <div class="start-prompt">CLICK TO PLAY AGAIN</div>
+  </div>
+
+  <!-- Floating score popups container -->
+  <div id="popup-container"></div>
+
+</body>
+</html>
